@@ -1,14 +1,17 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { deleteBooks } from '../../app/redux/slices/bookSlice';
 
 const Library = () => {
+  const dispatch = useDispatch();
   const books = useSelector(state => state.books.books);
 
   const deleteBookHandler = (id) => {
     // dispatch the delete book hadler from here
+    dispatch(deleteBooks({id: id}))
   };
 
-  const booksTable = books.map(book => {
+  const booksTable = books.map(book =>
     <tr>
       <td>{book.title}</td>
       <td>{book.author}</td>
@@ -19,7 +22,7 @@ const Library = () => {
         </button>
       </td>
     </tr>
-  })
+  )
 
   return (
     <div>

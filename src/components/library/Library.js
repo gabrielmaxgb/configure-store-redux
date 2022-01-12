@@ -8,7 +8,7 @@ const Library = () => {
 
   const deleteBookHandler = (id) => {
     // dispatch the delete book hadler from here
-    dispatch(deleteBooks({id: id}))
+    dispatch(deleteBooks({id}))
   };
 
   const booksTable = books.map(book =>

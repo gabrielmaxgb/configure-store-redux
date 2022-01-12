@@ -18,9 +18,8 @@ const Addbook = () => {
       title,
       author,
       rating,
-      id: nanoid(),
+      // id: nanoid(),
     }))
-    console.log(state);
   }
 
   return (

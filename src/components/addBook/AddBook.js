@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 // import { addBook } from '../../app/redux/actions/bookActions';
-import { nanoid } from 'nanoid';
-import { useDispatch, useSelector } from 'react-redux';
+// import { nanoid } from 'nanoid';
+import { useDispatch } from 'react-redux';
 import { addBook } from '../../app/redux/slices/bookSlice';
 
 const Addbook = () => {
   const dispatch = useDispatch();
-  const state = useSelector(state => state);
   const [title, setTitle] = useState("");
   const [author, setAuthor] = useState("");
   const [rating, setRating] = useState("5");
